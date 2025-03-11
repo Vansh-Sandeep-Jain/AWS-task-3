@@ -15,5 +15,16 @@
   "alias": "${lambdas_alias_name}",
   "url_config": {},
   "ephemeral_storage": 512,
-  "tags": {}
+  "tags": {},
+  "task3_api": {
+    "resource_type": "api_gateway",
+    "deploy_stage": "api",
+    "dependencies": [],
+    "resources": {
+      "path" : "/hello",
+      "method" : "GET",
+      "lambda" : "hello_world"
+    },
+    "tags": {}
+  }
 }

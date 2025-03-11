@@ -29,11 +29,7 @@
     "resource_type": "api_gateway",
     "deploy_stage": "api",
     "dependencies": [],
-    "resources": {
-      "path" : "hello",
-      "method" : "GET",
-      "lambda" : "hello_world"
-    },
+    "resources": "/hello",
     "tags": {}
   }
 }
