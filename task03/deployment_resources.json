@@ -30,7 +30,7 @@
     "deploy_stage": "api",
     "dependencies": [],
     "resources": {
-      "path" : "/hello",
+      "path" : "hello",
       "method" : "GET",
       "lambda" : "hello_world"
     },
