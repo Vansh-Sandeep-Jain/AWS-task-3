@@ -1,7 +1,12 @@
 exports.handler = async (event) => {
-    console.log("Received events from SQS:", JSON.stringify(event));
-    return {
+    console.log("SQS Event Received:", JSON.stringify(event, null, 2));
+
+        event.Records.forEach(record => {
+            console.log("SQS Message Body:", record.body);
+        });
+    const response = {
         statusCode: 200,
-        body: "Success"
+        body: JSON.stringify('Hello from Lambda!'),
     };
+    return response;
 };

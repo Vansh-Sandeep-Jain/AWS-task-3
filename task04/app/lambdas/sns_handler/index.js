@@ -1,7 +1,12 @@
 exports.handler = async (event) => {
-    console.log("Received SNS events:", JSON.stringify(event));
-    return {
+    console.log("SNS Event Received:", JSON.stringify(event, null, 2));
+
+        event.Records.forEach(record => {
+            console.log("SNS Message:", record.Sns.Message);
+        });
+    const response = {
         statusCode: 200,
-        body: "Success"
+        body: JSON.stringify('Hello from Lambda!'),
     };
+    return response;
 };
